@@ -1,0 +1,150 @@
+{
+  // My revision on my user settings started on 05/20/24.
+  //
+  "extensions.autoUpdate": true,
+  "files.defaultLanguage": "powershell",
+  "powershell.startAutomatically": true,
+  "powershell.scriptAnalysis.enable": true,
+  "powershell.scriptAnalysis.settingsPath": "./PSScriptAnalyzer.psd1",
+  "powershell.integratedConsole.focusConsoleOnExecute": false,
+  "powershell.enableProfileLoading": true,
+  "powershell.developer.editorServicesLogLevel": "Verbose",
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.codeFormatting.preset": "Custom",
+  "powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.codeFormatting.autoCorrectAliases": true,
+  "powershell.codeFormatting.newLineAfterOpenBrace": false,
+  "powershell.codeFormatting.newLineAfterCloseBrace": true,
+  "powershell.codeFormatting.whitespaceBeforeOpenBrace": true,
+  "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
+  "powershell.codeFormatting.whitespaceAroundOperator": true,
+  "powershell.codeFormatting.whitespaceAfterSeparator": true,
+  "powershell.codeFormatting.ignoreOneLineBlock": true,
+  "powershell.codeFormatting.openBraceOnSameLine": false,
+  "powershell.codeFormatting.alignPropertyValuePairs": false,
+  "powershell.codeFolding.enable": true,
+  "powershell.developer.featureFlags": [
+    "PSReadLine"
+  ],
+  "[powershell]": {
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "editor.semanticHighlighting.enabled": false,
+    // Characters that will be used as word separators when doing word related navigations or operations.
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{}]}\\|;:'\",.<>/?"
+  },
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  // Cleans up whitespaces
+  "files.trimTrailingWhitespace": true,
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.rulers": [
+    120
+  ],
+  // editor settings that will add the closingquote or curly brace
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoSurround": "languageDefined",
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
+  "editor.tabCompletion": "on",
+  "editor.suggestSelection": "first",
+  "window.zoomLevel": 0,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    //"suppressResultsExplorerNotice": false,
+    //"suppressShowKeyBindingsNotice": true,
+    // "suppressUpdateNotice": true,
+    //"suppressWelcomeNotice": false
+  },
+  "gitlens.keymap": "chorded",
+  "editor.renderWhitespace": "all",
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.views.fileHistory.enabled": true,
+  //"gitlens.views.lineHistory.enabled": true,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.alwaysShowActions": true,
+  "scm.countBadge": "focused",
+  "explorer.confirmDelete": false,
+  "terminal.integrated.rightClickBehavior": "default",
+  "window.title": "${activeEditorLong}",
+  "editor.quickSuggestionsDelay": 1,
+  "breadcrumbs.enabled": false,
+  "editor.cursorBlinking": "expand",
+  "workbench.sideBar.location": "right",
+  "files.autoSave": "afterDelay",
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#FFD700",
+    "editorBracketHighlight.foreground2": "#DA70D6",
+    "editorBracketHighlight.foreground3": "#179fff",
+    "errorLens.errorBackground": "#e4545410",
+    "errorLens.errorForeground": "#ff646440",
+    "errorLens.errorMessageBackground": "#e4545405",
+    "errorLens.warningBackground": "#ff942f10",
+    "errorLens.warningForeground": "#fa973a70",
+    "errorLens.warningMessageBackground": "#fff00005",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBlue": "#2472c8",
+    "terminal.ansiBrightBlack": "#666666",
+    "terminal.ansiBrightBlue": "#569cd6",
+    "terminal.ansiBrightCyan": "#9cdcfe",
+    "terminal.ansiBrightGreen": "#b5cea8",
+    "terminal.ansiBrightMagenta": "#daadd6",
+    "terminal.ansiBrightRed": "#f14c4c",
+    "terminal.ansiBrightWhite": "#e5e5e5",
+    "terminal.ansiBrightYellow": "#DCDCAA",
+    "terminal.ansiCyan": "#11a8cd",
+    "terminal.ansiGreen": "#6a9955",
+    "terminal.ansiMagenta": "#C586C0",
+    "terminal.ansiRed": "#cd3131",
+    "terminal.ansiWhite": "#e5e5e5",
+    "terminal.ansiYellow": "#CE9178",
+    "terminal.background": "#1E1E1E",
+    "terminal.foreground": "#D4D4D4"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  // powershell settings
+  // you can specify a custom location for the powershell.exe/pwsh.exe file
+  // not required if you just want to use the default locations
+  "powershell.powerShellAdditionalExePaths": {
+    "PS7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "PS5.1": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+  },
+  "powershell.powerShellDefaultVersion": "PS7",
+  "powershell.pester.codeLens": false,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": [
+        "-noprofile"
+      ]
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash",
+      "icon": "terminal-bash"
+    }
+  },
+  "files.exclude": {
+    "**/.git": false
+  },
+}
