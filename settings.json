@@ -1,11 +1,17 @@
 {
   // My revision on my user settings started on 05/20/24.
   //
+  // Controls the automatic update behavior of extensions. The updates are fetched from a Microsoft online service.
   "extensions.autoUpdate": true,
   "files.defaultLanguage": "powershell",
   "powershell.startAutomatically": true,
+  // Enables real-time script analysis using [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
+  // that populates the [Problems view](command:workbench.panel.markers.view.focus).
   "powershell.scriptAnalysis.enable": true,
+  // Specifies the path to a [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) settings file.
+  // **This setting may not work as expected currently!**
   "powershell.scriptAnalysis.settingsPath": "./PSScriptAnalyzer.psd1",
+  // Switches focus to the console when a script selection is run or a script file is debugged.
   "powershell.integratedConsole.focusConsoleOnExecute": false,
   "powershell.enableProfileLoading": true,
   "powershell.developer.editorServicesLogLevel": "Verbose",
@@ -23,17 +29,27 @@
   "powershell.codeFormatting.openBraceOnSameLine": false,
   "powershell.codeFormatting.alignPropertyValuePairs": false,
   "powershell.codeFolding.enable": true,
+  // An array of strings that enable experimental features in the PowerShell extension.
   "powershell.developer.featureFlags": [
     "PSReadLine"
   ],
   "[powershell]": {
+    // Controls what editors to save before starting a debug session.
+    //  - allEditorsInActiveGroup: Save all editors in the active group before starting a debug session.
+    //  - nonUntitledEditorsInActiveGroup: Save all editors in the active group except untitled ones before starting a debug session.
+    //  - none: Don't save any editors before starting a debug session.
     "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    // Controls whether the semanticHighlighting is shown for the languages that support it.
+    //  - true: Semantic highlighting enabled for all color themes.
+    //  - false: Semantic highlighting disabled for all color themes.
+    //  - configuredByTheme: Semantic highlighting is configured by the current color theme's `semanticHighlighting` setting.
     "editor.semanticHighlighting.enabled": false,
     // Characters that will be used as word separators when doing word related navigations or operations.
     "editor.wordSeparators": "`~!@#$%^&*()=+[{}]}\\|;:'\",.<>/?"
   },
+  // Specifies the color theme used in the workbench when `window.autoDetectColorScheme` is not enabled.
   "workbench.colorTheme": "Tomorrow Night Blue",
-  // Cleans up whitespaces
+  // When enabled, will trim trailing whitespace when saving a file.
   "files.trimTrailingWhitespace": true,
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
@@ -41,9 +57,13 @@
   "editor.insertSpaces": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
+  // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers.
+  // No rulers are drawn if array is empty.
   "editor.rulers": [
     120
   ],
+  // Controls how lines should wrap.
+  "editor.wordWrap": "on",
   // editor settings that will add the closingquote or curly brace
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingQuotes": "always",
@@ -146,5 +166,5 @@
   },
   "files.exclude": {
     "**/.git": false
-  },
+  }
 }
