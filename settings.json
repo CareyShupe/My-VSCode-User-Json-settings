@@ -68,6 +68,8 @@
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingQuotes": "always",
   "editor.autoSurround": "languageDefined",
+  // Controls the wrapping column of the editor when `editor.wordWrap` is `wordWrapColumn` or `bounded`.
+  "editor.wordWrapColumn": 120,
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": true,
   "editor.tabCompletion": "on",
@@ -173,5 +175,14 @@
   },
   "files.exclude": {
     "**/.git": false
+  },
+  // Configure settings to be overridden for the git-commit language.
+  "[git-commit]": {
+    "editor.rulers": [
+      50,
+      72
+    ],
+    "editor.wordWrap": "on",
+    "workbench.editor.restoreViewState": false
   }
 }
