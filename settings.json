@@ -1,15 +1,15 @@
 {
   // My revision on my user settings started on 05/20/24.
-  //
   // Controls the automatic update behavior of extensions. The updates are fetched from a Microsoft online service.
   "extensions.autoUpdate": true,
+  // When enabled, the notifications for extension recommendations will not be shown.
+  "extensions.ignoreRecommendations": "true",
   "files.defaultLanguage": "powershell",
   "powershell.startAutomatically": true,
   // Enables real-time script analysis using [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
   // that populates the [Problems view](command:workbench.panel.markers.view.focus).
   "powershell.scriptAnalysis.enable": true,
   // Specifies the path to a [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) settings file.
-  // **This setting may not work as expected currently!**
   "powershell.scriptAnalysis.settingsPath": "./PSScriptAnalyzer.psd1",
   // Switches focus to the console when a script selection is run or a script file is debugged.
   "powershell.integratedConsole.focusConsoleOnExecute": false,
@@ -86,10 +86,17 @@
     //"suppressWelcomeNotice": false
   },
   "gitlens.keymap": "chorded",
-  "editor.renderWhitespace": "all",
+  // Controls how the editor should render whitespace characters.
+  //  - none
+  //  - boundary: Render whitespace characters except for single spaces between words.
+  //  - selection: Render whitespace characters only on selected text.
+  //  - trailing: Render only trailing whitespace characters.
+  //  - all
+  "editor.renderWhitespace": "none",
   "gitlens.historyExplorer.enabled": true,
   "gitlens.views.fileHistory.enabled": true,
   //"gitlens.views.lineHistory.enabled": true,
+  "terminal.integrated.rendererType": "dom",
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "scm.alwaysShowRepositories": true,
