@@ -104,6 +104,10 @@
   ],
   // Configure editor settings to be overridden for a language.
   "[powershell]": {
+  //
+	//  - off: Lines will never wrap.
+	//  - on: Lines will wrap at the viewport width.
+	//  - inherit: Lines will wrap according to the `editor.wordWrap` setting.
     "diffEditor.wordWrap": "inherit",
     // Controls what editors to save before starting a debug session.
     //  - allEditorsInActiveGroup: Save all editors in the active group before starting a debug session.
@@ -135,9 +139,11 @@
   ],
   // Controls how lines should wrap.
   "editor.wordWrap": "on",
-  // editor settings that will add the closingquote or curly brace
+  // editor settings that will add the closing quote or curly brace
   "editor.autoClosingBrackets": "always",
+  // Controls whether the editor should automatically close quotes after the user adds an opening quote.
   "editor.autoClosingQuotes": "always",
+  // Controls whether the editor should automatically surround selections when typing quotes or brackets.
   "editor.autoSurround": "languageDefined",
   // Controls the wrapping column of the editor when `editor.wordWrap` is `wordWrapColumn` or `bounded`.
   "editor.wordWrapColumn": 120,
@@ -154,6 +160,7 @@
   "editor.fontLigatures": true,
   "editor.suggestSelection": "first",
   "window.zoomLevel": 0,
+  // Specifies which messages should be suppressed
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -161,10 +168,6 @@
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false
-    //"suppressResultsExplorerNotice": false,
-    //"suppressShowKeyBindingsNotice": true,
-    // "suppressUpdateNotice": true,
-    //"suppressWelcomeNotice": false
   },
   "gitlens.keymap": "chorded",
   // Controls how the editor should render whitespace characters.
@@ -174,9 +177,6 @@
   //  - trailing: Render only trailing whitespace characters.
   //  - all
   "editor.renderWhitespace": "none",
-  "gitlens.historyExplorer.enabled": true,
-  "gitlens.views.fileHistory.enabled": true,
-  //"gitlens.views.lineHistory.enabled": true,
   "terminal.integrated.rendererType": "dom",
   "git.showPushSuccessNotification": true,
   "merge-conflict.decorators.enabled": true,
