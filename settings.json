@@ -5,7 +5,57 @@
   "extensions.autoUpdate": true,
   // When enabled, the notifications for extension recommendations will not be shown.
   "extensions.ignoreRecommendations": "true",
-  "files.defaultLanguage": "powershell",
+  //
+  // ========================================
+  // | Powershell Stuff in Visual Code JSON.|
+  // ========================================
+  //
+  // The default language identifier that is assigned to new files.
+  "files.defaultLanguage": "PS7",
+  // powershell settings
+  // you can specify a custom location for the powershell.exe/pwsh.exe file
+  // not required if you just want to use the default locations
+  "powershell.powerShellAdditionalExePaths": {
+    "PS7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "PS5.1": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+  },
+  // Specifies the default PowerShell version started by the extension.
+  "powershell.powerShellDefaultVersion": "PS7",
+  // A set of terminal profile customizations for Windows which allows adding,  removing or changing how terminals are launched. Profiles are made up of a  mandatory path, optional arguments and other presentation options.
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": [
+        "-noprofile"
+      ]
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash",
+      "icon": "terminal-bash"
+    }
+  },
+  "files.exclude": {
+    "**/.git": false
+  },
+  // Configure settings to be overridden for the git-commit language.
+  "[git-commit]": {
+    "editor.rulers": [
+      50,
+      72
+    ],
+    "editor.wordWrap": "on",
+    "workbench.editor.restoreViewState": false
+  },
+  // Starts the PowerShell extension automatically when a PowerShell file is opened.
   "powershell.startAutomatically": true,
   // Enables real-time script analysis using [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
   // that populates the [Problems view](command:workbench.panel.markers.view.focus).
@@ -14,27 +64,47 @@
   "powershell.scriptAnalysis.settingsPath": "./PSScriptAnalyzer.psd1",
   // Switches focus to the console when a script selection is run or a script file is debugged.
   "powershell.integratedConsole.focusConsoleOnExecute": false,
+  // Specifies whether the extension loads PowerShell profiles.
   "powershell.enableProfileLoading": true,
   "powershell.developer.editorServicesLogLevel": "Verbose",
   "powershell.integratedConsole.showOnStartup": false,
-  "powershell.codeFormatting.preset": "Custom",
+  // Sets the code formatting options to follow the given indent style in a way that is compatible with PowerShell syntax. Any setting other than `Custom` will configure (and override) the settings:
+  //  - Custom: The three brace settings are respected as-is.
+  //  - Allman: Sets `powershell.codeFormatting.openBraceOnSameLine#` to `false`, `#powershell.codeFormatting.newLineAfterOpenBrace#` to `true`, and `#powershell.codeFormatting.newLineAfterCloseBrace` to `true`.
+  //  - OTBS: Sets `powershell.codeFormatting.openBraceOnSameLine#` to `true`, `#powershell.codeFormatting.newLineAfterOpenBrace#` to `true`, and `#powershell.codeFormatting.newLineAfterCloseBrace` to `false`.
+  //  - Stroustrup: Sets `powershell.codeFormatting.openBraceOnSameLine#` to `true`, `#powershell.codeFormatting.newLineAfterOpenBrace#` to `true`, and `#powershell.codeFormatting.newLineAfterCloseBrace` to `true`.
+  "powershell.codeFormatting.preset": "Stroustrup",
+  // Use correct casing for cmdlets.
   "powershell.codeFormatting.useCorrectCasing": true,
+  // Replaces aliases with their aliased name.
   "powershell.codeFormatting.autoCorrectAliases": true,
-  "powershell.codeFormatting.newLineAfterOpenBrace": false,
+  // Adds a newline (line break) after an open brace.
+  "powershell.codeFormatting.newLineAfterOpenBrace": true,
+  // Adds a newline (line break) after a closing brace.
   "powershell.codeFormatting.newLineAfterCloseBrace": true,
+  // Adds a space between a keyword and its associated script-block expression.
   "powershell.codeFormatting.whitespaceBeforeOpenBrace": true,
+  // Adds a space between a keyword (`if`, `elseif`, `while`, `switch`, etc.) and its associated conditional expression.
   "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
+  // Adds spaces before and after an operator (`=`, `+`, `-`, etc.).
   "powershell.codeFormatting.whitespaceAroundOperator": true,
+  // Adds a space after a separator (`,` and `;`).
   "powershell.codeFormatting.whitespaceAfterSeparator": true,
+  // Does not reformat one-line code blocks, such as: `if (...) {...} else {...}`.
   "powershell.codeFormatting.ignoreOneLineBlock": true,
-  "powershell.codeFormatting.openBraceOnSameLine": false,
+  // Places open brace on the same line as its associated statement.
+  "powershell.codeFormatting.openBraceOnSameLine": true,
+  // Align assignment statements in a hashtable or a DSC Configuration.
   "powershell.codeFormatting.alignPropertyValuePairs": false,
+  // Enables syntax based code folding. When disabled, the default indentation based code folding is used.
   "powershell.codeFolding.enable": true,
   // An array of strings that enable experimental features in the PowerShell extension.
   "powershell.developer.featureFlags": [
     "PSReadLine"
   ],
+  // Configure editor settings to be overridden for a language.
   "[powershell]": {
+    "diffEditor.wordWrap": "inherit",
     // Controls what editors to save before starting a debug session.
     //  - allEditorsInActiveGroup: Save all editors in the active group before starting a debug session.
     //  - nonUntitledEditorsInActiveGroup: Save all editors in the active group except untitled ones before starting a debug session.
@@ -71,7 +141,9 @@
   "editor.autoSurround": "languageDefined",
   // Controls the wrapping column of the editor when `editor.wordWrap` is `wordWrapColumn` or `bounded`.
   "editor.wordWrapColumn": 120,
+  //I don't find this useful, wasted screen space.
   "editor.minimap.enabled": false,
+  // Zoom the font of the editor when using mouse wheel and holding Ctrl.
   "editor.mouseWheelZoom": true,
   "workbench.tree.indent": 16,
   "workbench.editor.highlightModifiedTabs": true,
@@ -172,47 +244,6 @@
     "terminal.foreground": "#D4D4D4"
   },
   "workbench.iconTheme": "vscode-icons",
-  // powershell settings
-  // you can specify a custom location for the powershell.exe/pwsh.exe file
-  // not required if you just want to use the default locations
-  "powershell.powerShellAdditionalExePaths": {
-    "PS7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-    "PS5.1": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
-  },
-  "powershell.powerShellDefaultVersion": "PS7",
   "powershell.pester.codeLens": false,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell",
-      "args": [
-        "-noprofile"
-      ]
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash",
-      "icon": "terminal-bash"
-    }
-  },
-  "files.exclude": {
-    "**/.git": false
-  },
-  // Configure settings to be overridden for the git-commit language.
-  "[git-commit]": {
-    "editor.rulers": [
-      50,
-      72
-    ],
-    "editor.wordWrap": "on",
-    "workbench.editor.restoreViewState": false
-  }
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
