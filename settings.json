@@ -4,7 +4,7 @@
   // Controls the automatic update behavior of extensions.
   "extensions.autoUpdate": true,
   // When enabled, the notifications for extension recommendations will not be shown.
-  "extensions.ignoreRecommendations": "true",
+  "extensions.ignoreRecommendations": true,
   //
   // ========================================
   // | Powershell Stuff in Visual Code JSON.|
@@ -104,21 +104,24 @@
   ],
   // Configure editor settings to be overridden for a language.
   "[powershell]": {
-  //
-	//  - off: Lines will never wrap.
-	//  - on: Lines will wrap at the viewport width.
-	//  - inherit: Lines will wrap according to the `editor.wordWrap` setting.
-    "diffEditor.wordWrap": "inherit",
-    // Controls what editors to save before starting a debug session.
-    //  - allEditorsInActiveGroup: Save all editors in the active group before starting a debug session.
-    //  - nonUntitledEditorsInActiveGroup: Save all editors in the active group except untitled ones before starting a debug session.
-    //  - none: Don't save any editors before starting a debug session.
-    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "editor.defaultFormatter": "ms-vscode.powershell",
+    "editor.language.brackets": [
+      [
+        "{",
+        "}"
+      ],
+      [
+        "(",
+        ")"
+      ],
+      [
+        "#region",
+        "#endregion"
+      ]
+    ],
     // Controls whether the semanticHighlighting is shown for the languages that support it.
-    //  - true: Semantic highlighting enabled for all color themes.
-    //  - false: Semantic highlighting disabled for all color themes.
-    //  - configuredByTheme: Semantic highlighting is configured by the current color theme's `semanticHighlighting` setting.
     "editor.semanticHighlighting.enabled": false,
+    "editor.wordBasedSuggestions": false,
     // Characters that will be used as word separators when doing word related navigations or operations.
     "editor.wordSeparators": "`~!@#$%^&*()=+[{}]}\\|;:'\",.<>/?"
   },
