@@ -6,9 +6,7 @@
   // When enabled, the notifications for extension recommendations will not be shown.
   "extensions.ignoreRecommendations": true,
   //
-  // ========================================
-  // | Powershell Stuff in Visual Code JSON.|
-  // ========================================
+  //  Powershell Setting in Visual Studio Code JSON.
   //
   // The default language identifier that is assigned to new files.
   "files.defaultLanguage": "PS7",
@@ -26,9 +24,8 @@
     "PowerShell": {
       "source": "PowerShell",
       "icon": "terminal-powershell",
-      "args": [
-        "-noprofile"
-      ]
+      "args": ["-NoLogo"],
+      "overrideName": false
     },
     "Command Prompt": {
       "path": [
@@ -41,19 +38,11 @@
     "Git Bash": {
       "source": "Git Bash",
       "icon": "terminal-bash"
-    }
-  },
-  "files.exclude": {
+    },
+
+    "files.exclude": {
     "**/.git": false
-  },
-  // Configure settings to be overridden for the git-commit language.
-  "[git-commit]": {
-    "editor.rulers": [
-      50,
-      72
-    ],
-    "editor.wordWrap": "on",
-    "workbench.editor.restoreViewState": false
+    }
   },
   // Starts the PowerShell extension automatically when a PowerShell file is opened.
   "powershell.startAutomatically": true,
