@@ -22,9 +22,11 @@
   // A set of terminal profile customizations for Windows which allows adding,  removing or changing how terminals are launched. Profiles are made up of a  mandatory path, optional arguments and other presentation options.
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
-      "source": "PowerShell",
+      "source": "PS7",
       "icon": "terminal-powershell",
-      "args": ["-NoLogo"],
+      "args": [
+        "-NoLogo"
+      ],
       "overrideName": false
     },
     "Command Prompt": {
@@ -39,9 +41,8 @@
       "source": "Git Bash",
       "icon": "terminal-bash"
     },
-
     "files.exclude": {
-    "**/.git": false
+      "**/.git": false
     }
   },
   // Starts the PowerShell extension automatically when a PowerShell file is opened.
