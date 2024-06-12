@@ -18,7 +18,13 @@
   "editor.snippetSuggestions": "bottom",
   // Controls whether an active snippet prevents quick suggestions.
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  // The default language identifier that is assigned to new files.
+  // Powershell does this so bring it over.
+  "editor.tabCompletion": "on",  // The default language identifier that is assigned to new files.
+
+  // I don't want to update while working. It could break something.
+  "update.enableWindowsBackgroundUpdates": false,
+  // Follow the OS theme default
+  "window.autoDetectColorScheme": true,
   "files.defaultLanguage": "PS7",
   // powershell settings
   // you can specify a custom location for the powershell.exe/pwsh.exe file
@@ -156,7 +162,6 @@
   "editor.mouseWheelZoom": true,
   "workbench.tree.indent": 16,
   "workbench.editor.highlightModifiedTabs": true,
-  "editor.tabCompletion": "on",
   "terminal.integrated.fontSize": 12,
   "editor.fontFamily": "Fira Code",
   "editor.lineHeight": 19,
