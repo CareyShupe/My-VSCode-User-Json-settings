@@ -1,5 +1,7 @@
 {
   // My revision on my user settings started on 05/20/24.
+  // It's been a work in progress and when I see Justin Grote settings.
+  // I will finish my revision.
   //
   // Controls the automatic update behavior of extensions.
   "extensions.autoUpdate": true,
@@ -8,6 +10,14 @@
   //
   //  Powershell Setting in Visual Studio Code JSON.
   //
+  // Controls whether snippets are shown with other suggestions and how they are sorted.
+  //  - top: Show snippet suggestions on top of other suggestions.
+  //  - bottom: Show snippet suggestions below other suggestions.
+  //  - inline: Show snippets suggestions with other suggestions.
+  //  - none: Do not show snippet suggestions.
+  "editor.snippetSuggestions": "bottom",
+  // Controls whether an active snippet prevents quick suggestions.
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
   // The default language identifier that is assigned to new files.
   "files.defaultLanguage": "PS7",
   // powershell settings
