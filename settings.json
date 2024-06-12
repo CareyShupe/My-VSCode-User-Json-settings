@@ -19,8 +19,7 @@
   // Controls whether an active snippet prevents quick suggestions.
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   // Powershell does this so bring it over.
-  "editor.tabCompletion": "on",  // The default language identifier that is assigned to new files.
-
+  "editor.tabCompletion": "on", // The default language identifier that is assigned to new files.
   // I don't want to update while working. It could break something.
   "update.enableWindowsBackgroundUpdates": false,
   // Follow the OS theme default
