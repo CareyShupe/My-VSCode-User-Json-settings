@@ -21,25 +21,26 @@
   // Powershell does this so bring it over.
   "editor.tabCompletion": "on",
   // The default language identifier that is assigned to new files.
-  "files.defaultLanguage": "powershell",
+  "files.defaultLanguage": "PS5.1",
   // powershell settings
   // you can specify a custom location for the powershell.exe/pwsh.exe file
   // not required if you just want to use the default locations
   "powershell.powerShellAdditionalExePaths": {
-    "PS7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "PS7": "${env:SystemRoot}\\Program Files\\PowerShell\\7\\pwsh.exe",
     "PS5.1": "${env:SystemRoot}\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    // "${env:SystemRoot}\\System32\\WindowsPowerShell\\v1.0\\pwsh.exe"
   },
   // Specifies the default PowerShell version started by the extension.
-  "powershell.powerShellDefaultVersion": "PS7",
+  "powershell.powerShellDefaultVersion": "Powershell",
   // A set of terminal profile customizations for Windows which allows adding,  removing or changing how terminals are launched. Profiles are made up of a  mandatory path, optional arguments and other presentation options.
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
-      "source": "PS5.1",
+      "source": "PS7",
       "icon": "terminal-powershell",
       "args": [
-        "/NoLogo",
-        "/NoExit",
-        "/Command",
+        "-NoLogo",
+        "-NoExit",
+        "-Command",
         "'v{0} x{1}' -f $PSVersionTable.PSVersion.ToString(),$(if([System.Environment]::Is64BitProcess){'64'}else{'86'})"
       ],
       "overrideName": true
