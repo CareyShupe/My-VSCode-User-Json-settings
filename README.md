@@ -1,3 +1,1 @@
-Here is my Json settings for my VSCode for  powershell, git and gitlen. Feel free to use and I would like to
-hear your thoughts on my settings. My inspiration came from Justin Grote, Trevor Sullivan, videos and alot of YouTube FYI
-and Googling. I am not done with tweaking and wonder why some settings are depreciated and may have a comment to use another or nothing.
+Here are my JSON settings for VSCode for PowerShell, Git, and GitLens. Feel free to use them, and I would love to hear your thoughts on my settings. My inspiration came from Justin Grote, Trevor Sullivan, various videos, a lot of YouTube, and Googling. I am still tweaking these settings and wondering why some settings are deprecated. I may have comments suggesting alternatives or nothing at all.
