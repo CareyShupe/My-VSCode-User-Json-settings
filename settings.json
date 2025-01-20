@@ -4,41 +4,7 @@
   "workbench.sideBar.location": "right",
   // Controls if the minimap is shown. I don't find this useful, wasted screen space.
   "editor.minimap.enabled": false,
-  "workbench.iconTheme": "vscode-icons", // Set icon theme to vscode-icons
-  //Save files after 10 seconds of no typing. Since I use Git a lot I'm not worried about accidentally overwriting stuff
-  "files.autoSave": "afterDelay", // Save files after a delay
-  "files.autoSaveDelay": 10000, // Time in milliseconds after which a file will be saved automatically.
-  // ===========================================
-  // | Powershell Settings in Visual Code JSON.|
-  // ===========================================
-  //
-  // The default language identifier that is assigned to new files.
-  // you can specify a custom location for the powershell.exe/pwsh.exe file
-  // not required if you just want to use the default locations
-  "powershell.powerShellAdditionalExePaths": {
-    "PS7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-    "PS5.1": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
-  },
-  "powershell.startAutomatically": true,
-  "powershell.scriptAnalysis.enable": true,
-  "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
-  "powershell.enableProfileLoading": false,
-  "editor.language.brackets": [
-    [
-      "{",
-      "}"
-    ],
-    [
-      "(",
-      ")"
-    ],
-    [
-      "#region",
-      "#endregion"
-    ]
-  ],
-  "editor.semanticHighlighting.enabled": true,
-  "editor.renderWhitespace": "all", // Render all whitespaces
+  //  - indent: Wrapped lines get +1 indentation toward the parent.
   "editor.renderControlCharacters": true,
   "files.trimTrailingWhitespace": true, // Trim trailing whitespace on save
   "files.encoding": "utf8", // Set the default encoding for new files
