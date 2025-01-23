@@ -7,7 +7,7 @@
   "workbench.iconTheme": "vscode-icons", // Set icon theme to vscode-icons
   //Save files after 10 seconds of no typing. Since I use Git a lot I'm not worried about accidentally overwriting stuff
   "files.autoSave": "afterDelay", // Save files after a delay
-  "files.autoSaveDelay": 10000, // Time in milliseconds after which a file will be saved automatically.
+  "files.autoSaveDelay": 1000, // Time in milliseconds after which a file will be saved automatically.
   // ===========================================
   // | Powershell Settings in Visual Code JSON.|
   // ===========================================
@@ -43,6 +43,14 @@
   "files.trimTrailingWhitespace": true, // Trim trailing whitespace on save
   "files.encoding": "utf8", // Set the default encoding for new files
   "files.autoGuessEncoding": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true
+  },
   "editor.wordBasedSuggestions": "currentDocument",
   "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -66,7 +74,7 @@
   "editor.foldingImportsByDefault": true,
   "editor.fontFamily": "CaskaydiaCove NF, CaskaydiaCove Nerd Font, JetBrainsMono Nerd Font, FiraCode Nerd Font, Cascadia Code PL, Consolas, monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "editor.fontWeight": "300",
   "editor.formatOnPaste": true, // Format on paste
   "editor.formatOnSave": true, // Format on save
@@ -81,7 +89,7 @@
   "editor.inlayHints.fontSize": 12,
   "editor.inlineSuggest.enabled": true,
   "editor.lineHeight": 1.2,
-  "editor.insertSpaces": false,
+  "editor.insertSpaces": true, // Insert spaces instead of tabs
   "editor.quickSuggestions": {
     "comments": "on",
     "other": "off",
@@ -108,7 +116,7 @@
   "editor.suggest.preview": true,
   "editor.suggest.showStatusBar": true,
   "editor.suggestSelection": "first",
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
   "editor.tokenColorCustomizations": {
     "[Default Dark+ Experimental]": {
       "textMateRules": [
@@ -566,7 +574,7 @@
     "powershell.powerShellDefaultVersion",
     // This is deprecated, use `#terminal.integrated.defaultProfile.windows#` instead
     //"terminal.integrated.shell.windows"
-    "terminal.integrated.defaultProfile.windows",
+    "terminal.integrated.defaultProfile.windows"
   ],
   "sortJSON.orderOverride": [
     "prefix",
@@ -790,6 +798,7 @@
   "workbench.editor.openPositioning": "first",
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.editor.enablePreview": false, // Disable preview mode for editors
+  "workbench.editor.showTabs": true, // Show tabs
   "workbench.preferredLightColorTheme": "Default Dark+", // Set light color theme to Default Dark+
   "workbench.startupEditor": "newUntitledFile", // Set startup editor to new untitled file
   "workbench.colorTheme": "Default Dark+", // Set color theme to Default Dark+
