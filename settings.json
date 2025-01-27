@@ -1,3 +1,4 @@
+{
   // My revision on my user settings that I started on 05/20/24.
   // Where I define all my user settings for Visual Studio Code.
   "files.autoSave": "afterDelay", // Save files after a delay
@@ -571,7 +572,7 @@
     "powershell.powerShellDefaultVersion",
     // This is deprecated, use `#terminal.integrated.defaultProfile.windows#` instead
     //"terminal.integrated.shell.windows"
-    "terminal.integrated.defaultProfile.windows",
+    "terminal.integrated.defaultProfile.windows"
   ],
   "sortJSON.orderOverride": [
     "prefix",
@@ -825,6 +826,5 @@
   "debug.openDebug": "openOnDebugBreak",
   "debug.toolBarLocation": "docked",
   "settingsSync.keybindingsPerPlatform": false,
-  "vscode_vibrancy.enableAutoTheme": true,
+  "vscode_vibrancy.enableAutoTheme": true
 }
-
