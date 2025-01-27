@@ -826,5 +826,5 @@
   "debug.openDebug": "openOnDebugBreak",
   "debug.toolBarLocation": "docked",
   "settingsSync.keybindingsPerPlatform": false,
-  "vscode_vibrancy.enableAutoTheme": true
+  "gibrancy.enableAutoTheme": true
 }
