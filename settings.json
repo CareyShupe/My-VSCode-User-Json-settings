@@ -6,21 +6,15 @@
    */
   // I prefer my sidebar to the right. My code doesn't move
   "workbench.sideBar.location": "right",
-<<<<<<< HEAD
+
   // My preference for me and my profiles.
   "workbench.settings.applyToAllProfiles": [
     "workbench.sideBar.location"
   ],
   // The gutter view is not for me. It's a waste of space.
-  "editor.minimap.enabled": false,
-  "workbench.colorTheme": "Default Dark+",
-  "workbench.iconTheme": "vs-seti",
   "editor.dragAndDrop": true,
   "extensions.autoUpdate": true,
   "extensions.autoCheckUpdates": true, // If no typing. Since I use Git a lot I'm not worried about accidentally overwriting stuff
-  "files.autoSave": "afterDelay",
-  // 10000 is equal to 10 seconds.
-  "files.autoSaveDelay": 10000,
   // Always remember unsaved files, I'll explicitly close them if I don't want them
   "files.hotExit": "onExitAndWindowClose",
   // Controls how lines should wrap.n
@@ -42,7 +36,6 @@
       - full: The editor will keep the current line's indentation, honor language defined brackets,
          invoke special onEnterRules defined by languages, and honor indentationRules defined by languages.
     */
-=======
   // Controls if the minimap is shown. I don't find this useful, wasted screen space.
   "editor.minimap.enabled": false,
   "workbench.iconTheme": "vscode-icons", // Set icon theme to vscode-icons
@@ -64,26 +57,8 @@
   "powershell.scriptAnalysis.enable": true,
   "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
   "powershell.enableProfileLoading": false,
-  "editor.language.brackets": [
-    [
-      "{",
-      "}"
-    ],
-    [
-      "(",
-      ")"
-    ],
-    [
-      "#region",
-      "#endregion"
-    ]
-  ],
   "editor.semanticHighlighting.enabled": true,
-  "editor.renderWhitespace": "all", // Render all whitespaces
-  "editor.renderControlCharacters": true,
-  "files.trimTrailingWhitespace": true, // Trim trailing whitespace on save
   "files.encoding": "utf8", // Set the default encoding for new files
-  "files.autoGuessEncoding": true,
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true
@@ -92,19 +67,11 @@
     "**/node_modules": true,
     "**/bower_components": true
   },
-  "editor.wordBasedSuggestions": "currentDocument",
-  "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.wordWrap": "off",
-  "editor.accessibilitySupport": "off",
+
   "editor.autoClosingBrackets": "always", // Automatically close brackets
-  "editor.autoClosingQuotes": "always", // Automatically close quotes
   "editor.autoSurround": "brackets", // Automatically surround selection with brackets
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always", // Organize imports on save
-    "source.fixAll": "always" // Fix all auto-fixable problems on save
-  },
->>>>>>> new
   "editor.autoIndent": "full",
   // Defines a default formatter which takes precedence over all other formatter settings. Must be the identifier of an extension contributing a formatter.
   "editor.renderWhitespace": "all",
@@ -181,30 +148,11 @@
   "search.useGlobalIgnoreFiles": true,
   "editor.detectIndentation": true,
   "editor.foldingImportsByDefault": true,
-<<<<<<< HEAD
   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
-  "editor.fontWeight": "400",
-  // Controls whether the editor should automatically format the pasted content.
-  "editor.formatOnPaste": true,
-  // Format a file on save. A formatter must be available, the file must not be saved after delay, and the editor must not be shutting down.
-  "editor.formatOnSave": true,
-  // Controls whether the editor should automatically format the line after typing.
-  "editor.formatOnType": true,
-  // Controls if format on save formats the whole file or only modifications. Only applies when `editor.formatOnSave` is enabled.
-  //  - file: Format the whole file.
-  //  - modifications: Format modifications (requires source control).
-  //  - modificationsIfAvailable: Will attempt to format modifications only (requires source control). If source control can't be used, then the whole file will be formatted.
-  "editor.formatOnSaveMode": "modifications",
-=======
-  "editor.fontFamily": "CaskaydiaCove NF, CaskaydiaCove Nerd Font, JetBrainsMono Nerd Font, FiraCode Nerd Font, Cascadia Code PL, Consolas, monospace",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 16,
-  "editor.fontWeight": "300",
   "editor.formatOnPaste": true, // Format on paste
   "editor.formatOnSave": true, // Format on save
   "editor.formatOnType": true, // Format on type
   "editor.formatOnSaveMode": "modifications", // Format only modified lines on save
->>>>>>> new
   "editor.guides.highlightActiveBracketPair": true,
   "editor.guides.bracketPairs": "active",
   "editor.guides.bracketPairsHorizontal": true,
@@ -213,14 +161,9 @@
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.inlayHints.fontSize": 14,
   "editor.inlineSuggest.enabled": true,
-<<<<<<< HEAD
-  "editor.lineHeight": 22,
   "editor.letterSpacing": 0.5,
-  "editor.insertSpaces": true,
-=======
   "editor.lineHeight": 1.2,
   "editor.insertSpaces": true, // Insert spaces instead of tabs
->>>>>>> new
   "editor.quickSuggestions": {
     "comments": "on",
     "other": "off",
@@ -244,11 +187,8 @@
   "editor.suggest.preview": true,
   "editor.suggest.showStatusBar": true,
   "editor.suggestSelection": "first",
-<<<<<<< HEAD
   "editor.tabCompletion": "on",
-=======
   "editor.tabSize": 4,
->>>>>>> new
   "editor.tokenColorCustomizations": {
     "[Default Dark+ Experimental]": {
       "textMateRules": [
@@ -329,22 +269,16 @@
     "*.json": "jsonc",
     "*.ps1": "powershell"
   },
-<<<<<<< HEAD
-  /*
+/*
       Powershell Settings
-   */
-=======
-  "files.defaultLanguage": "powershell",
-  "files.hotExit": "onExitAndWindowClose",
+*/
   "git-graph.repository.commits.fetchAvatars": true,
   "git-graph.repository.fetchAndPrune": true,
-  "git.autofetch": true,
   "git.autoStash": true,
   "git.branchPrefix": "feature/",
   "git.branchRandomName.enable": true,
   "git.confirmEmptyCommits": false,
   "git.confirmSync": false,
-  "git.enableSmartCommit": true,
   "git.ignoreMissingGitWarning": true,
   "git.inputValidationSubjectLength": 72,
   "git.openAfterClone": "whenNoFolderOpen",
@@ -723,15 +657,11 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.linux": "pwsh",
-  "terminal.integrated.defaultProfile.windows": "Pwsh🐒",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.enablePersistentSessions": false,
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, CaskaydiaCove NF",
-  "terminal.integrated.fontSize": 16, // Set terminal font size.
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.lineHeight": 0,
   "terminal.integrated.persistentSessionReviveProcess": "never",
->>>>>>> new
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -776,7 +706,6 @@
     "editor.parameterHints.enabled": false,
     "editor.defaultFormatter": "GitHub.copilot"
   },
-<<<<<<< HEAD
   /*
       Terminal Settings
 
@@ -803,23 +732,14 @@
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "workbench.activityBar.location": "top",
-  "security.workspace.trust.untrustedFiles": "open",
-  "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7",
   "terminal.integrated.automationProfile.windows": {
     "path": "C:\\Users\\Carey.Shupe\\Documents\\PowerShell"
   },
   "editor.unicodeHighlight.nonBasicASCII": false,
-  "terminal.explorerKind": "external",
-  "json.schemaDownload.enable": false,
+    "json.schemaDownload.enable": false,
   "window.openFilesInNewWindow": "on",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.enablePreview": false,
   "editor.inlineSuggest.showToolbar": "always",
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
-  "settingsSync.ignoredSettings": [
-    "editor.inlineSuggest.syntaxHighlightingEnabled"
-  ]
-=======
   "workbench.editor.decorations.badges": true,
   "workbench.activityBar.iconClickBehavior": "toggle",
   "workbench.commandPalette.history": 50,
@@ -838,13 +758,10 @@
   "terminal.integrated.tabs.description": "${sequence}${separator}${task}${separator}${workspaceFolder}",
   "terminal.integrated.tabs.enableAnimation": true,
   "debug.openDebug": "openOnDebugBreak",
-  "editor.tabCompletion": "on",
   "powershell.integratedConsole.focusConsoleOnExecute": true,
   //"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
   "powershell.buttons.showPanelMovementButtons": false,
   "powershell.codeFolding.showLastLine": true,
   "debug.toolBarLocation": "docked",
-  "githubPullRequests.pullBranch": "never",
-  "workbench.activityBar.location": "top"
->>>>>>> new
-}
+  "githubPullRequests.pullBranch": "never"
+  }
