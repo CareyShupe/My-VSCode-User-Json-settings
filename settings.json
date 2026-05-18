@@ -1,61 +1,77 @@
 {
-  /*
-      This is my selections using Visual Studio Code
-      as a primary editor for my Powershell scripts.
-      My Visual Studio Code General Settings is a work in progress.
-   */
+  // ============================================================
+  //  THEME & ICONS
+  // ============================================================
+  "workbench.colorTheme": "Night Owl",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.hidesExplorerArrows": true,
 
-  // ----------- Workbench UI Customizations ------------
-  "workbench.colorTheme": "Aura Dracula Spirit", // Set the color theme to Aura Dracula Spirit.
-  "workbench.iconTheme": "material-icon-theme", // Set the icon theme to Material Icon Theme.
-  "material-icon-theme.hidesExplorerArrows": true, // Hide explorer arrows in Material Icon Theme.
-  "workbench.editorAssociations": {
-    // Associate file types with editors.
-    "*.ps1": "default" // Associate .ps1 files with the default editor.
+  // ============================================================
+  //  WORKBENCH LAYOUT
+  // ============================================================
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.autoLockGroups": {
+    "polyglot-notebook": true,
+    "jupyter-notebook": true
   },
-  "workbench.tree.indent": 15, // Set the tree indent to 15.
-  "workbench.tree.renderIndentGuides": "always", // Always render indent guides in the tree.
-  "workbench.sideBar.location": "right", // Hide the status bar.
-  "workbench.editor.showTabs": "multiple", // Disable showing Tabs.
-  "workbench.editor.tabSizing": "shrink", // Set tab sizing to shrink.
-  "workbench.layoutControl.enabled": false, // Disable layout control.
-  "workbench.startupEditor": "none", // Disable startup editor.
+  "workbench.editor.preferHistoryBasedLanguageDetection": true,
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.panel.opensMaximized": "never",
   "workbench.tips.enabled": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.editorAssociations": {
+    "*.ps1": "default"
+  },
   "workbench.settings.applyToAllProfiles": [
     "workbench.colorCustomizations",
     "editor.tokenColorCustomizations",
-    "editor.semanticTokenColorCustomizations"
+    "editor.semanticTokenColorCustomizations",
+    "workbench.startupEditor"
   ],
-  // ----------- Comment Styling -----------
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": [
-          // Change the scope to match the comment type you want to style
-          "comment",
-          "comment.block.documentation",
-          "comment.line.double-slash",
-          "comment.line.number-sign",
-          "comment.block.documentation.string"
-        ],
-        "settings": {
-          "foreground": "#00FF00", // Replace with your desired color (e.g., green),
-          "fontStyle": "italic bold" // Optional: Add italic style to comments
-        }
-      }
-    ]
-  },
 
-  // Overrides colors from the currently selected color theme.
+  // ============================================================
+  //  WINDOW
+  // ============================================================
+  "window.restoreWindows": "none",
+  "window.density.editorTabHeight": "compact",
+  "window.newWindowDimensions": "maximized",
+  "window.openFoldersInNewWindow": "off",
+  "window.openWithoutArgumentsInNewWindow": "off",
+  "window.commandCenter": false,
+  "window.titleSeparator": " | ",
+  "window.title": "${dirty}${remoteName}${separator}${rootName}${separator}${activeEditorShort}${separator}${appName}",
+
+  // ============================================================
+  //  COLOR CUSTOMIZATIONS
+  // ============================================================
   "workbench.colorCustomizations": {
-    "editorSuggestWidget.selectedBackground": "#271a41", // Set the background color of the selected suggestion.
+    // --- Sidebar & Explorer ---
+    "sideBar.background": "#271638",
+    "tree.indentGuidesStroke": "#05ef3c",
+    "list.activeSelectionBackground": "#271a41",
+    "list.inactiveSelectionBackground": "#271a41",
+    "list.focusBackground": "#271a41",
+    "list.hoverBackground": "#271a41",
+
+    // --- Editor ---
     "editor.lineHighlightBackground": "#202640",
-    "editorLineNumber.activeForeground": "#ffff00",
     "editor.lineHighlightBorder": "#9fced11f",
+    "editorLineNumber.activeForeground": "#ffff00",
+    "editorSuggestWidget.selectedBackground": "#271a41",
+
+    // --- Bracket Pair Colors ---
     "editorBracketHighlight.foreground1": "#569CD6",
     "editorBracketHighlight.foreground2": "#C586C0",
     "editorBracketHighlight.foreground3": "#4EC9B0",
     "editorBracketHighlight.foreground4": "#CE9178",
+
+    // --- ErrorLens ---
     "errorLens.errorBackground": "#e4545410",
     "errorLens.errorForeground": "#ff646440",
     "errorLens.errorMessageBackground": "#e4545405",
@@ -64,12 +80,10 @@
     "errorLens.warningBackground": "#ff942f10",
     "errorLens.warningForeground": "#fa973a70",
     "errorLens.warningMessageBackground": "#fff00005",
-    "list.activeSelectionBackground": "#271a41",
-    "list.inactiveSelectionBackground": "#271a41",
-    "list.focusBackground": "#271a41",
-    "list.hoverBackground": "#271a41",
-    "sideBar.background": "#271638", // Set the background color of the sidebar.
-    "tab.lastPinnedBorder": "#2472c8",
+
+    // --- Terminal ---
+    "terminal.background": "#3b353500",
+    "terminal.foreground": "#D4D4D4",
     "terminalCursor.foreground": "#569cd6",
     "terminal.ansiBlack": "#000000",
     "terminal.ansiBlue": "#2472c8",
@@ -77,85 +91,39 @@
     "terminal.ansiBrightBlue": "#569cd6",
     "terminal.ansiBrightCyan": "#9cdcfe",
     "terminal.ansiBrightGreen": "#b5cea8",
-    "terminal.ansiBrightMagenta": "#daadd6",
     "terminal.ansiBrightRed": "#f14c4c",
-    "terminal.ansiBrightWhite": "#e5e5e5",
     "terminal.ansiBrightYellow": "#DCDCAA",
     "terminal.ansiCyan": "#11a8cd",
     "terminal.ansiGreen": "#6a9955",
     "terminal.ansiMagenta": "#C586C0",
     "terminal.ansiRed": "#cd3131",
-    "terminal.ansiWhite": "#e5e5e5",
-    "terminal.ansiYellow": "#CE9178",
-    "terminal.background": "#3b353500",
-    "terminal.foreground": "#D4D4D4",
-    "tree.indentGuidesStroke": "#05ef3c", // Set the color of the indent guides in the tree.
-    "testing.message.error.decorationForeground": "#cd3131",
-    "testing.message.error.lineBackground": "#e4545405"
+    "terminal.ansiYellow": "#CE9178"
   },
-  // ----------- Editor Customizations.
-  "editor.minimap.enabled": false, // Disable minimap.
-  "editor.guides.highlightActiveBracketPair": true, // Enable active bracket pair highlighting.
-  "editor.guides.bracketPairs": "active", // Enable bracket pair guides.
-  "editor.guides.bracketPairsHorizontal": true, // Enable horizontal bracket pair guides.
-  "editor.matchBrackets": "near", // Match brackets near the cursor.
-  "editor.guides.highlightActiveIndentation": false, // Disable highlight active indentation guides.
-  "editor.guides.indentation": false, // Disable indentation guides.
-  "editor.renderWhitespace": "none", // Disable render whitespace.
-  "editor.renderControlCharacters": true, // Render control characters
-  "editor.renderLineHighlight": "none", // Disable line highlight
-  "editor.lightbulb.enabled": "off", // Show lightbulb off
-  "editor.hover.enabled": true, // Enable hover
-  "editor.showFoldingControls": "always", // Show folding controls
-  "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting.
-  "editor.stickyTabStops": true, // Enable sticky tab stops.
-  "editor.suggest.localityBonus": true, // Enable locality bonus for suggestions.
-  "editor.suggest.preview": false, // Disable preview for suggestions.
-  "editor.suggest.showStatusBar": true, // Show status bar for suggestions.
-  "editor.suggestSelection": "first", // Show first suggestion by default.
-  "editor.wordBasedSuggestions": "currentDocument", // Enable word based suggestions.
-  "editor.tabCompletion": "on", // Enable tab completion.
-  "editor.accessibilitySupport": "on", // Enable accessibility support.
-  "editor.autoClosingQuotes": "languageDefined", // Auto closing quotes.
-  "editor.autoClosingBrackets": "languageDefined", // Auto closing brackets
-  "editor.autoSurround": "brackets", // Automatically surround selection with brackets
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always", // Organize imports on save
-    "source.fixAll": "always" // Fix all auto-fixable problems on save
+
+  // ============================================================
+  //  TOKEN COLOR CUSTOMIZATIONS (Comment Styling)
+  // ============================================================
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "comment.block.documentation",
+          "comment.line.double-slash",
+          "comment.line.number-sign",
+          "comment.block.documentation.string"
+        ],
+        "settings": {
+          "foreground": "#00FF00",
+          "fontStyle": "italic bold"
+        }
+      }
+    ]
   },
-  "editor.autoIndent": "full", // Auto indent
-  "editor.bracketPairColorization.enabled": true, // Enable bracket pair colorization
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true, // Independent color pool per bracket type
-  "editor.cursorBlinking": "expand", // Smooth cursor blinking
-  "editor.cursorSmoothCaretAnimation": "on", // Smooth caret animation
-  "editor.smoothScrolling": true, // Enable smooth scrolling
-  "editor.detectIndentation": true, // Detect indentation
-  "editor.foldingImportsByDefault": true, // Fold imports by default
-  "editor.fontFamily": "CaskaydiaCove NF, CaskaydiaCove Nerd Font, JetBrainsMono Nerd Font, FiraCode Nerd Font, Cascadia Code PL, Consolas, monospace",
-  "editor.fontLigatures": true, // Enable font ligatures
-  "editor.fontSize": 14, // Set the font size
-  "editor.fontWeight": "400", // Set the font weight
-  "editor.formatOnPaste": true, // Format on paste
-  "editor.formatOnSave": true, // Format on save
-  "editor.formatOnType": true, // Format on type
-  "editor.formatOnSaveMode": "modifications", // Format only modified lines on save
-  "editor.inlayHints.enabled": "offUnlessPressed",
-  "editor.inlayHints.fontSize": 12,
-  "editor.inlineSuggest.enabled": true,
-  "editor.lineHeight": 1.5,
-  "editor.insertSpaces": false,
-  "editor.quickSuggestions": {
-    "comments": "on",
-    "other": "off",
-    "strings": "on"
-  },
-  "editor.parameterHints.enabled": true,
-  "editor.rulers": [
-    {
-      "column": 120,
-      "color": "#1f3a4066"
-    }
-  ],
+
+  // ============================================================
+  //  SEMANTIC TOKEN COLOR CUSTOMIZATIONS
+  // ============================================================
   "editor.semanticTokenColorCustomizations": {
     "enabled": true,
     "rules": {
@@ -174,20 +142,76 @@
     }
   },
 
-  "editor.snippetSuggestions": "bottom", // Show snippet suggestions at the bottom
-  "editor.tabSize": 2, // Set the tab size to 2 spaces
-  "editor.useTabStops": true, // Use tab stops
-  "editor.wordWrap": "on", // Enable word wrap.
-  "editor.wordWrapColumn": 120, // Set the word wrap column
-  "editor.dragAndDrop": true, // Enable drag and drop
-  "editor.wrappingIndent": "same",
-  "editor.columnSelection": false,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // ============================================================
+  //  EDITOR — APPEARANCE
+  // ============================================================
+  "editor.fontFamily": "'CaskaydiaCove NF', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.fontWeight": "400",
+  "editor.letterSpacing": -0.1,
+  "editor.lineHeight": 1.5,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  // NOTE: "all" enables line highlight — color controlled by colorCustomizations above
+  "editor.renderLineHighlight": "all",
+  "editor.rulers": [
+    {
+      "column": 120,
+      "color": "#1f3a4066"
+    }
+  ],
+  "editor.overviewRulerBorder": false,
   "editor.scrollbar.vertical": "visible",
   "editor.scrollbar.horizontal": "visible",
   "editor.scrollbar.verticalScrollbarSize": 15,
   "editor.scrollbar.horizontalScrollbarSize": 15,
-  "editor.overviewRulerBorder": false,
+  "editor.lightbulb.enabled": "off",
+
+  // ============================================================
+  //  EDITOR — CURSOR & SCROLLING
+  // ============================================================
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLines": 3,
+  "editor.cursorSurroundingLinesStyle": "all",
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+
+  // ============================================================
+  //  EDITOR — BRACKET & INDENTATION GUIDES
+  // ============================================================
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.matchBrackets": "near",
+  "editor.language.brackets": [
+    ["{", "}"],
+    ["(", ")"],
+    ["#region", "#endregion"]
+  ],
+
+  // ============================================================
+  //  EDITOR — INTELLISENSE & SUGGESTIONS
+  // ============================================================
+  "editor.hover.enabled": true,
+  "editor.parameterHints.enabled": true,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "off"
+  },
+  "editor.suggestSelection": "first",
+  "editor.suggest.preview": false,
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.suggest.showIcons": true,
   "editor.suggest.showClasses": false,
   "editor.suggest.showConstants": false,
   "editor.suggest.showConstructors": false,
@@ -195,110 +219,126 @@
   "editor.suggest.showEnums": false,
   "editor.suggest.showEvents": false,
   "editor.suggest.showFields": false,
-  "editor.linkedEditing": true,
-  "editor.letterSpacing": -0.1,
-  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.snippetSuggestions": "bottom",
+  "editor.wordBasedSuggestions": "currentDocument",
+  "editor.tabCompletion": "on",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.inlayHints.fontSize": 12,
+  // Inline suggestions (Copilot ghost text) — enabled; see Copilot section
+  "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.showToolbar": "always",
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
-  "editor.defaultFormatter": "GitHub.copilot",
-  "extensions.autoUpdate": true,
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.factorypath": true,
-    "**/.project": true,
-    "**/.settings": true
-  },
-  "extensions.autoCheckUpdates": true,
-  "files.trimFinalNewlines": true,
-  // Trim trailing whitespace on save
-  "files.trimTrailingWhitespace": true,
-  // Automatically save files after a delay.
-  "files.autoSave": "afterDelay",
-  "files.dialog.defaultPath": "D:\\Projects",
-  // The delay in milliseconds after which files will be saved automatically.
-  // 10000 is equal to 10 seconds.
-  "files.autoSaveDelay": 10000,
-  // Always remember unsaved files, I'll explicitly close them if I don't want them
-  "files.hotExit": "onExitAndWindowClose",
-  // When enabled, the notifications for extension recommendations will not be shown.
-  "extensions.ignoreRecommendations": true,
-  // Open new windows maximized.
-  "window.newWindowDimensions": "maximized",
-  // Per Justin Grote, Hammers my system if I left a bunch of stuff open before. I'll open what I want.
-  "window.restoreWindows": "none",
-  // Easier way to distinguish between multiple windows
-  "window.title": "${dirty}${remoteName}${separator}${rootName}${separator}${activeEditorShort}${separator}${appName}",
-  "window.titleSeparator": " | ",
-  // Show command launcher together with the window title.
-  "window.density.editorTabHeight": "compact",
-  // Show command launcher together with the window title.
-  "window.commandCenter": false,
-  // Controls the font family in the Debug Console.
-  "debug.console.fontFamily": "default",
-  // Honor E.G. .gitignore
-  "search.useGlobalIgnoreFiles": true,
 
-  "explorer.copyRelativePathSeparator": "/",
-  "explorer.fileNesting.enabled": true,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.fileNesting.patterns": {
-    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-    "*.jsx": "${capture}.js",
-    "*.ps1": "${capture}.tests.ps1",
-    "*.psm1": "${capture}.tests.ps1, ${capture}.psd1",
-    "*.ts": "${basename}.spec.${extname}, ${capture}.js, ${basename}.test.${extname}",
-    "*.tsx": "${capture}.ts",
-    "package.json": "package-lock.json, .npmrc, yarn.lock, .yarnrc, pnpm-lock.yaml",
-    "tsconfig.json": "tsconfig.*.json"
+  // ============================================================
+  //  EDITOR — BEHAVIOR
+  // ============================================================
+  "editor.accessibilitySupport": "on",
+  "editor.autoClosingBrackets": "languageDefined",
+  "editor.autoClosingQuotes": "languageDefined",
+  "editor.autoIndent": "full",
+  "editor.autoSurround": "brackets",
+  "editor.codeActions.triggerOnFocusChange": true,
+  "editor.columnSelection": false,
+  "editor.dragAndDrop": true,
+  "editor.find.cursorMoveOnType": false,
+  "editor.linkedEditing": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.showFoldingControls": "always",
+  "editor.stickyTabStops": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "\u00a0": true
   },
-  "files.associations": {
-    ".denoflare": "jsonc",
-    "*.json": "jsonc",
-    "*.ps1": "powershell"
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "editor.wrappingIndent": "same",
+
+  // ============================================================
+  //  EDITOR — FORMATTING
+  // ============================================================
+  // NOTE: defaultFormatter is intentionally NOT set globally.
+  //       It is scoped per-language below to avoid conflicts.
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.fixAll": "always"
   },
+  "editor.detectIndentation": false,
+  "editor.foldingImportsByDefault": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4,
+  "editor.useTabStops": true,
 
-  /*
-      Powershell Settings
-   */
-
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
+  // ============================================================
+  //  LANGUAGE-SPECIFIC OVERRIDES
+  // ============================================================
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell",
+    "editor.tabSize": 4,
+    "editor.wordWrapColumn": 120
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
     }
   },
-  // Powershell is the default with 'new Item'
-  "files.defaultLanguage": "pwsh",
-  "editor.language.brackets": [
-    ["{", "}"],
-    ["(", ")"],
-    ["#region", "#endregion"]
-  ],
-  // Powershell specific settings
-  "[powershell]": {
-    "files.encoding": "utf8",
-    "files.autoGuessEncoding": true,
-    "editor.formatOnSave": true,
-    "editor.parameterHints.enabled": true,
-    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?"
-  },
 
+  // ============================================================
+  //  FILES
+  // ============================================================
+  "files.defaultLanguage": "powershell",
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 10000,
+  "files.hotExit": "onExitAndWindowClose",
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  // ============================================================
+  //  EXPLORER
+  // ============================================================
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.enabled": true,
+
+  // ============================================================
+  //  EXTENSIONS
+  // ============================================================
+  "extensions.autoUpdate": true,
+  "extensions.autoCheckUpdates": true,
+  "extensions.ignoreRecommendations": true,
+
+  // ============================================================
+  //  POWERSHELL EXTENSION
+  // ============================================================
   "powershell.promptToUpdatePowerShell": false,
   "powershell.startAutomatically": true,
   "powershell.scriptAnalysis.enable": true,
-  "powershell.codeFormatting.preset": "OTBS",
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.pester.codeLens": false,
+  "powershell.powerShellAdditionalExePaths": {
+    "pwsh7": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+  },
+  "powershell.codeFormatting.preset": "Allman",
   "powershell.codeFormatting.addWhitespaceAroundPipe": true,
   "powershell.codeFormatting.alignPropertyValuePairs": true,
   "powershell.codeFormatting.autoCorrectAliases": true,
@@ -316,67 +356,62 @@
   "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
   "powershell.codeFormatting.whitespaceBetweenParameters": false,
   "powershell.codeFormatting.whitespaceInsideBrace": true,
-  "powershell.integratedConsole.showOnStartup": false,
-  "powershell.pester.codeLens": false,
 
-  // ----------- Terminal Customizations.
-  "terminal.integrated.hideOnStartup": "always",
-  "terminal.integrated.persistentSessionReviveProcess": "never",
-  "terminal.integrated.enablePersistentSessions": false,
-  "terminal.integrated.tabs.showActiveTerminal": "never",
+  // ============================================================
+  //  TERMINAL
+  // ============================================================
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "path": "pwsh.exe",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash",
+      "icon": "terminal-git-bash"
+    }
+  },
+  "terminal.integrated.automationProfile.windows": {
+    "path": "pwsh.exe"
+  },
+  "terminal.external.windowsExec": "pwsh.exe",
+  "terminal.explorerKind": "external",
+  "terminal.integrated.fontFamily": "Cascadia Code PL, monospace",
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.fontWeightBold": "bold",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorWidth": 1,
-
-  /*
-      Enable this experimental terminal Intellisense suggestions for supported shells (PowerShell) when
-      `terminal.integrated.shellIntegration.enabled` is set to 'false'.
-   */
-  "terminal.integrated.suggest.enabled": true,
-
-  // The minimum contrast ratio feature can cause colors to not be displayed as expected.
-  "terminal.integrated.minimumContrastRatio": 1,
-  "terminal.integrated.scrollback": 1000,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.fontFamily": "CaskaydiaCove NF, CaskaydiaCove Nerd Font, JetBrainsMono Nerd Font, FiraCode Nerd Font, Cascadia Code PL, Consolas, monospace",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.confirmOnExit": "never",
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.showActiveTerminal": "never",
   "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.scrollback": 1000,
+  "terminal.integrated.minimumContrastRatio": 1,
+  "terminal.integrated.suggest.enabled": true,
   "terminal.integrated.enableImages": true,
-  "terminal.integrated.gpuAcceleration": "off",
-  "security.workspace.trust.untrustedFiles": "open",
-  "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-  "terminal.integrated.automationProfile.windows": {
-    "path": "C:\\Users\\Carey.Shupe\\Documents\\PowerShell"
-  },
-  "terminal.explorerKind": "external",
-  "settingsSync.ignoredSettings": [
-    "editor.inlineSuggest.syntaxHighlightingEnabled"
-  ],
+  "terminal.integrated.gpuAcceleration": "auto",
 
-  /*
-      Git and GitHub Settings
-   */
-
+  // ============================================================
+  //  GIT
+  // ============================================================
   "git.openRepositoryInParentFolders": "always",
   "git.enableSmartCommit": true,
+  "git.confirmSync": false,
   "git.autofetch": true,
-  "editor.find.cursorMoveOnType": false,
-  "vsicons.dontShowNewVersionMessage": true,
-  "remote.defaultExtensionsIfInstalledLocally": [
-    "GitHub.copilot",
-    "GitHub.copilot-chat",
-    "GitHub.vscode-pull-request-github"
-  ],
-  "window.openFoldersInNewWindow": "off",
-  "window.openWithoutArgumentsInNewWindow": "off",
-  "polyglot-notebook.defaultNotebookExtension": ".ipynb",
-  "polyglot-notebook.defaultNotebookLanguage": "pwsh",
+  "git.blame.editorDecoration.enabled": true,
   "git-graph.repository.fetchAndPruneTags": true,
-  "application.shellEnvironmentResolutionTimeout": 120,
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "git-autoconfig.configList": [
     {
       "user.email": "cwshupe@gmail.com",
@@ -384,26 +419,54 @@
     }
   ],
 
-  /*
-      Markdown Settings
-   */
+  // ============================================================
+  //  GITLENS
+  // ============================================================
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-  },
-  "markdown.preview.scrollEditorWithPreview": true,
-  "markdown.preview.scrollPreviewWithEditor": true,
-  "markdown.extension.orderedList.marker": "one",
-  "markdown.extension.list.indentationSize": "inherit",
-  "markdown.extension.toc.levels": "1..3",
-  "markdown.extension.toc.orderedList": false,
-  "markdownlint.config": {
-    "default": true,
-    "MD013": false, // disable line length warning
-    "MD033": false // allow inline HTML
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "powershell.enableProfileLoading": false
+  // ============================================================
+  //  COPILOT / AI
+  // ============================================================
+  // Best practice: keep inline suggestions active (high value, low noise).
+  // Chat UI and agent features are disabled — re-enable if you start using them.
+  // "editor.inlineSuggest.enabled" is set above in the Editor section.
+  "chat.agent.enabled": false,
+  "chat.agentsControl.enabled": false,
+  "chat.mcp.autostart": "never",
+  "chat.mcp.access": "none",
+  "chat.mcp.apps.enabled": false,
+  "chat.extensionUnification.enabled": false,
+  "chat.extensionTools.enabled": false,
+  "chat.detectParticipant.enabled": false,
+  "chat.implicitContext.suggestedContext": false,
+  "inlineChat.affordance": "off",
+
+  // ============================================================
+  //  DEBUG
+  // ============================================================
+  "debug.console.fontFamily": "default",
+  "debug.breakpointsView.presentation": "tree",
+
+  // ============================================================
+  //  SECURITY
+  // ============================================================
+  "security.workspace.trust.banner": "always",
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // ============================================================
+  //  POLYGLOT NOTEBOOKS
+  // ============================================================
+  "polyglot-notebook.defaultNotebookExtension": ".ipynb",
+  "polyglot-notebook.defaultNotebookLanguage": "pwsh",
+
+  // ============================================================
+  //  JSON SCHEMAS
+  // ============================================================
+  "json.schemas": [
+    {
+      "fileMatch": ["markdownlint.json", ".markdownlint.json"],
+      "url": "https://raw.githubusercontent.com/DavidAnson/markdownlint/v0.40.0/schema/markdownlint-config-schema.json"
+    }
+  ]
 }
