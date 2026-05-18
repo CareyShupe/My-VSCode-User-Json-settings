@@ -5,7 +5,6 @@
   "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.hidesExplorerArrows": true,
-
   // ============================================================
   //  WORKBENCH LAYOUT
   // ============================================================
@@ -16,7 +15,6 @@
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.enablePreview": false,
   "workbench.editor.autoLockGroups": {
-    "polyglot-notebook": true,
     "jupyter-notebook": true
   },
   "workbench.editor.preferHistoryBasedLanguageDetection": true,
@@ -34,7 +32,6 @@
     "editor.semanticTokenColorCustomizations",
     "workbench.startupEditor"
   ],
-
   // ============================================================
   //  WINDOW
   // ============================================================
@@ -46,7 +43,6 @@
   "window.commandCenter": false,
   "window.titleSeparator": " | ",
   "window.title": "${dirty}${remoteName}${separator}${rootName}${separator}${activeEditorShort}${separator}${appName}",
-
   // ============================================================
   //  COLOR CUSTOMIZATIONS
   // ============================================================
@@ -58,19 +54,16 @@
     "list.inactiveSelectionBackground": "#271a41",
     "list.focusBackground": "#271a41",
     "list.hoverBackground": "#271a41",
-
     // --- Editor ---
     "editor.lineHighlightBackground": "#202640",
     "editor.lineHighlightBorder": "#9fced11f",
     "editorLineNumber.activeForeground": "#ffff00",
     "editorSuggestWidget.selectedBackground": "#271a41",
-
     // --- Bracket Pair Colors ---
     "editorBracketHighlight.foreground1": "#569CD6",
     "editorBracketHighlight.foreground2": "#C586C0",
     "editorBracketHighlight.foreground3": "#4EC9B0",
     "editorBracketHighlight.foreground4": "#CE9178",
-
     // --- ErrorLens ---
     "errorLens.errorBackground": "#e4545410",
     "errorLens.errorForeground": "#ff646440",
@@ -80,7 +73,6 @@
     "errorLens.warningBackground": "#ff942f10",
     "errorLens.warningForeground": "#fa973a70",
     "errorLens.warningMessageBackground": "#fff00005",
-
     // --- Terminal ---
     "terminal.background": "#3b353500",
     "terminal.foreground": "#D4D4D4",
@@ -99,7 +91,6 @@
     "terminal.ansiRed": "#cd3131",
     "terminal.ansiYellow": "#CE9178"
   },
-
   // ============================================================
   //  TOKEN COLOR CUSTOMIZATIONS (Comment Styling)
   // ============================================================
@@ -120,7 +111,6 @@
       }
     ]
   },
-
   // ============================================================
   //  SEMANTIC TOKEN COLOR CUSTOMIZATIONS
   // ============================================================
@@ -141,7 +131,6 @@
       }
     }
   },
-
   // ============================================================
   //  EDITOR — APPEARANCE
   // ============================================================
@@ -169,7 +158,6 @@
   "editor.scrollbar.verticalScrollbarSize": 15,
   "editor.scrollbar.horizontalScrollbarSize": 15,
   "editor.lightbulb.enabled": "off",
-
   // ============================================================
   //  EDITOR — CURSOR & SCROLLING
   // ============================================================
@@ -179,7 +167,6 @@
   "editor.cursorSurroundingLinesStyle": "all",
   "editor.smoothScrolling": true,
   "editor.mouseWheelZoom": true,
-
   // ============================================================
   //  EDITOR — BRACKET & INDENTATION GUIDES
   // ============================================================
@@ -192,11 +179,19 @@
   "editor.guides.highlightActiveIndentation": true,
   "editor.matchBrackets": "near",
   "editor.language.brackets": [
-    ["{", "}"],
-    ["(", ")"],
-    ["#region", "#endregion"]
+    [
+      "{",
+      "}"
+    ],
+    [
+      "(",
+      ")"
+    ],
+    [
+      "#region",
+      "#endregion"
+    ]
   ],
-
   // ============================================================
   //  EDITOR — INTELLISENSE & SUGGESTIONS
   // ============================================================
@@ -229,7 +224,6 @@
   "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.showToolbar": "always",
   "editor.inlineSuggest.syntaxHighlightingEnabled": true,
-
   // ============================================================
   //  EDITOR — BEHAVIOR
   // ============================================================
@@ -255,7 +249,6 @@
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 120,
   "editor.wrappingIndent": "same",
-
   // ============================================================
   //  EDITOR — FORMATTING
   // ============================================================
@@ -273,7 +266,6 @@
   "editor.insertSpaces": true,
   "editor.tabSize": 4,
   "editor.useTabStops": true,
-
   // ============================================================
   //  LANGUAGE-SPECIFIC OVERRIDES
   // ============================================================
@@ -302,7 +294,6 @@
       "other": "off"
     }
   },
-
   // ============================================================
   //  FILES
   // ============================================================
@@ -312,21 +303,18 @@
   "files.hotExit": "onExitAndWindowClose",
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-
   // ============================================================
   //  EXPLORER
   // ============================================================
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
-
   // ============================================================
   //  EXTENSIONS
   // ============================================================
   "extensions.autoUpdate": true,
   "extensions.autoCheckUpdates": true,
   "extensions.ignoreRecommendations": true,
-
   // ============================================================
   //  POWERSHELL EXTENSION
   // ============================================================
@@ -356,7 +344,6 @@
   "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
   "powershell.codeFormatting.whitespaceBetweenParameters": false,
   "powershell.codeFormatting.whitespaceInsideBrace": true,
-
   // ============================================================
   //  TERMINAL
   // ============================================================
@@ -402,7 +389,6 @@
   "terminal.integrated.suggest.enabled": true,
   "terminal.integrated.enableImages": true,
   "terminal.integrated.gpuAcceleration": "auto",
-
   // ============================================================
   //  GIT
   // ============================================================
@@ -418,13 +404,11 @@
       "user.name": "Carey Shupe"
     }
   ],
-
   // ============================================================
   //  GITLENS
   // ============================================================
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-
   // ============================================================
   //  COPILOT / AI
   // ============================================================
@@ -441,31 +425,25 @@
   "chat.detectParticipant.enabled": false,
   "chat.implicitContext.suggestedContext": false,
   "inlineChat.affordance": "off",
-
   // ============================================================
   //  DEBUG
   // ============================================================
   "debug.console.fontFamily": "default",
   "debug.breakpointsView.presentation": "tree",
-
   // ============================================================
   //  SECURITY
   // ============================================================
   "security.workspace.trust.banner": "always",
   "security.workspace.trust.untrustedFiles": "open",
-
-  // ============================================================
-  //  POLYGLOT NOTEBOOKS
-  // ============================================================
-  "polyglot-notebook.defaultNotebookExtension": ".ipynb",
-  "polyglot-notebook.defaultNotebookLanguage": "pwsh",
-
   // ============================================================
   //  JSON SCHEMAS
   // ============================================================
   "json.schemas": [
     {
-      "fileMatch": ["markdownlint.json", ".markdownlint.json"],
+      "fileMatch": [
+        "markdownlint.json",
+        ".markdownlint.json"
+      ],
       "url": "https://raw.githubusercontent.com/DavidAnson/markdownlint/v0.40.0/schema/markdownlint-config-schema.json"
     }
   ]
